@@ -83,7 +83,7 @@ export function hljsLanguages(): HighlightLanguage[] {
 	declarations: [AppComponent],
 	imports: [
 		BrowserAnimationsModule,
-		BrowserModule,
+		BrowserModule.withServerTransition({ appId: 'serverApp' }),
 		AppRoutingModule,
 		HttpClientModule,
 		environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forRoot(FakeApiService, {
